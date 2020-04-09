@@ -35,7 +35,7 @@
 
         form.onsubmit = function(e) {
           e.preventDefault();
-          const url = zoom.value.replace(/-|\s/g, '');
+          const url = zoom.value.replace(/[^0-9]/g, '');
           window.location = `https://zoom.us/wc/${url}/join`;
         }
       });
